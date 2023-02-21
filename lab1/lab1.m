@@ -2,7 +2,7 @@ clear
 clc
 close all
 
-amplitude = 220;
+amplitude = 220 * sqrt(2);
 freq_hz = 50;
 freq = freq_hz * 2 * pi;
 L = 95 * 10^-3;
@@ -80,7 +80,7 @@ plot(t, multiplied, 'b');
 % d) 873 - utläst från grafen, aktiv effekt
 mean_ = mean(multiplied);
 
-% e) Energi återgår till källan
+% e) Spolen fasförskjuter strömmen och ger reaktiv effekt
 
 %% Uppgift 3 - Växelspänning i tre faser 
 clc
@@ -145,4 +145,3 @@ plot(t, out.uelnat);
 plot(t, out.usg);
 plot(t, out.u_over_brytare);
 legend('Nätspänning', 'Generatorspänning', 'Skillnadsspänning');
-
